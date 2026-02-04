@@ -1,24 +1,43 @@
-# 🖥️ CoreLink GUI (GTK+3)
+# GTK+ 3 GUI Primer u C-u
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Language-C-A8B9CC?style=for-the-badge&logo=c&logoColor=white" />
-  <img src="https://img.shields.io/badge/GUI-GTK%2B3.0-7f55c1?style=for-the-badge&logo=gnome&logoColor=white" />
-</p>
+Jednostavan primer GTK+ 3 aplikacije napisan u čistom C-u koja pokazuje kako se pravi osnovni grafički interfejs koristeći biblioteku GTK 3.
 
-Ovaj projekat predstavlja implementaciju osnovnog grafičkog interfejsa napisanog u **C jeziku** korišćenjem **GTK+ 3.0** biblioteke. Program demonstrira rad sa prozorima, dugmićima i interaktivnim dijalozima (pop-up prozorima).
+## Snimak ekrana
 
-## ✨ Funkcionalnosti
-* **Glavni prozor:** Desktop aplikacija fiksne veličine sa naslovom.
-* **Signal Handling:** Povezivanje klikova na dugme sa C funkcijama preko `g_signal_connect`.
-* **Interaktivnost:** Prikazivanje "Message Dialog" prozora sa povratnom informacijom.
-* **Native Performanse:** Brzo izvršavanje uz minimalnu potrošnju memorije.
+(Ovde možeš kasnije dodati sliku – na primer `screenshot.png`)
 
----
+## Šta ovaj program radi
 
-## 🚀 Instalacija i Pokretanje
+- Otvara glavni prozor
+- Ima natpis (label) i dugme
+- Kada se klikne dugme, pojavljuje se poruka (message dialog)
+- Lep, moderan GTK 3 izgled
+- Ispravno zatvara prozor kada se klikne X
 
-### 1. Sistemske zavisnosti
-Proverite da li su instalirani kompajler i GTK razvojni paketi:
+## Preduslovi
+
+Potreban ti je Linux / macOS sa instaliranim razvojnim paketima za GTK 3.
+
+### Ubuntu / Debian / Pop!_OS / Mint
+
 ```bash
+sudo apt update
+sudo apt install gcc pkg-config libgtk-3-dev
+
+# Proveri verzije (opciono)
 gcc --version
 pkg-config --version
+
+# Pogledaj potrebne zastavice i biblioteke
+pkg-config --cflags --libs gtk+-3.0
+
+# Kompilacija
+gcc gui.c -o gui `pkg-config --cflags --libs gtk+-3.0`
+
+# Pokretanje
+./gui
+
+gtk3-c-primer/
+├── gui.c          ← glavni izvorni fajl
+├── README.md      ← ovaj fajl
+└── screenshot.png (opciono)
