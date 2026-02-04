@@ -1,43 +1,36 @@
-# GTK+ 3 GUI Primer u C-u
+# 🖥️ CoreLink GUI: GTK+3 Primer u C-u
 
-Jednostavan primer GTK+ 3 aplikacije napisan u čistom C-u koja pokazuje kako se pravi osnovni grafički interfejs koristeći biblioteku GTK 3.
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-C-A8B9CC?style=for-the-badge&logo=c&logoColor=white" />
+  <img src="https://img.shields.io/badge/GUI-GTK%2B3.0-7f55c1?style=for-the-badge&logo=gnome&logoColor=white" />
+  <img src="https://img.shields.io/badge/Status-Active-green?style=for-the-badge" />
+</p>
 
-## Snimak ekrana
+Jednostavan i efikasan primer **GTK+ 3** aplikacije napisan u čistom **C jeziku**. Ovaj projekat služi kao polazna tačka za razumevanje *event-driven* programiranja i izradu native grafičkih interfejsa na Linux sistemima.
 
-(Ovde možeš kasnije dodati sliku – na primer `screenshot.png`)
+---
 
-## Šta ovaj program radi
+## 🖼️ Snimak ekrana
+<p align="center">
+  <img src="https://via.placeholder.com/400x300.png?text=Screenshot+Aplikacije" alt="GUI Screenshot" />
+  <br>
+  <i>(Ovde možete zameniti sliku vašim screenshot.png fajlom)</i>
+</p>
 
-- Otvara glavni prozor
-- Ima natpis (label) i dugme
-- Kada se klikne dugme, pojavljuje se poruka (message dialog)
-- Lep, moderan GTK 3 izgled
-- Ispravno zatvara prozor kada se klikne X
+---
 
-## Preduslovi
+## ✨ Funkcionalnosti
+* **Glavni prozor:** Desktop aplikacija sa precizno definisanim dimenzijama i paddingom.
+* **Interaktivnost:** Implementacija `GtkButton` widget-a sa signal-callback mehanizmom.
+* **Dijalozi:** Dinamičko pozivanje `GtkMessageDialog` prozora za interakciju sa korisnikom.
+* **Native Lifecycle:** Pravilno rukovanje procesima i zatvaranje aplikacije na `destroy` signal.
 
-Potreban ti je Linux / macOS sa instaliranim razvojnim paketima za GTK 3.
+---
 
-### Ubuntu / Debian / Pop!_OS / Mint
-
-```bash
-sudo apt update
-sudo apt install gcc pkg-config libgtk-3-dev
-
-# Proveri verzije (opciono)
-gcc --version
-pkg-config --version
-
-# Pogledaj potrebne zastavice i biblioteke
-pkg-config --cflags --libs gtk+-3.0
-
-# Kompilacija
-gcc gui.c -o gui `pkg-config --cflags --libs gtk+-3.0`
-
-# Pokretanje
-./gui
-
+## 📂 Struktura Projekta
+```text
 gtk3-c-primer/
-├── gui.c          ← glavni izvorni fajl
-├── README.md      ← ovaj fajl
-└── screenshot.png (opciono)
+├── gui.c          # Glavni izvorni fajl sa logikom
+├── README.md      # Dokumentacija projekta
+└── screenshot.png # Vizuelni prikaz (opciono)
+
