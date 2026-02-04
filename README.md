@@ -12,9 +12,9 @@ Jednostavan i efikasan primer **GTK+ 3** aplikacije napisan u čistom **C jeziku
 
 ## 🖼️ Snimak ekrana
 <p align="center">
-  <img src="https://via.placeholder.com/400x300.png?text=Screenshot+Aplikacije" alt="GUI Screenshot" />
+  <img src="Screenshot_GUI_C.png" alt="CoreLink GUI Screenshot" width="500" />
   <br>
-  <i>(Ovde možete zameniti sliku vašim screenshot.png fajlom)</i>
+  <i>Prikaz CoreLink GUI aplikacije sa aktivnim dijalogom</i>
 </p>
 
 ---
