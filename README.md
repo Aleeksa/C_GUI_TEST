@@ -33,4 +33,13 @@ gtk3-c-primer/
 ├── gui.c          # Glavni izvorni fajl sa logikom
 ├── README.md      # Dokumentacija projekta
 └── screenshot.png # Vizuelni prikaz (opciono)
+```
 
+## 🚀 Instalacija i Pokretanje
+```text
+sudo apt update
+sudo apt install gcc pkg-config libgtk-3-dev
+pkg-config --cflags --libs gtk+-3.0
+gcc gui.c -o gui `pkg-config --cflags --libs gtk+-3.0`
+./gui
+```
