@@ -1,4 +1,4 @@
-# 🖥️ CoreLink GUI: GTK+3 Primer u C-u
+# 🖥️ CoreLink GUI: GTK+3 Primer in C
 
 <p align="center">
   <img src="https://img.shields.io/badge/Language-C-A8B9CC?style=for-the-badge&logo=c&logoColor=white" />
@@ -6,40 +6,42 @@
   <img src="https://img.shields.io/badge/Status-Active-green?style=for-the-badge" />
 </p>
 
-Jednostavan i efikasan primer **GTK+ 3** aplikacije napisan u čistom **C jeziku**. Ovaj projekat služi kao polazna tačka za razumevanje *event-driven* programiranja i izradu native grafičkih interfejsa na Linux sistemima.
+A simple and efficient **GTK+ 3** application example written in pure **C**. This project serves as a starting point for understanding *event-driven* programming and building native graphical interfaces on Linux systems.
 
 ---
 
-## 🖼️ Snimak ekrana
+## 🖼️ Screenshot
 <p align="center">
   <img src="Screenshot_GUI_C.png" alt="CoreLink GUI Screenshot" width="500" />
   <br>
-  <i>Prikaz CoreLink GUI aplikacije sa aktivnim dijalogom</i>
+  <i>Display of the CoreLink GUI application with an active dialog</i>
 </p>
 
 ---
 
-## ✨ Funkcionalnosti
-* **Glavni prozor:** Desktop aplikacija sa precizno definisanim dimenzijama i paddingom.
-* **Interaktivnost:** Implementacija `GtkButton` widget-a sa signal-callback mehanizmom.
-* **Dijalozi:** Dinamičko pozivanje `GtkMessageDialog` prozora za interakciju sa korisnikom.
-* **Native Lifecycle:** Pravilno rukovanje procesima i zatvaranje aplikacije na `destroy` signal.
+## ✨ Features
+* **Main Window:** Desktop application with precisely defined dimensions and padding.
+* **Interactivity:** Implementation of `GtkButton` widgets with signal-callback mechanisms.
+* **Dialogs:** Dynamic invocation of `GtkMessageDialog` windows for user interaction.
+* **Native Lifecycle:** Proper process handling and application termination on the `destroy` signal.
 
 ---
 
-## 📂 Struktura Projekta
+## 📂 Project Structure
 ```text
 gtk3-c-primer/
-├── gui.c          # Glavni izvorni fajl sa logikom
-├── README.md      # Dokumentacija projekta
-└── screenshot.png # Vizuelni prikaz (opciono)
-```
-
-## 🚀 Instalacija i Pokretanje
-```text
+├── gui.c          # Main source file with logic
+├── README.md      # Project documentation
+└── screenshot.png # Visual preview (optional)
+# Update and install dependencies
 sudo apt update
 sudo apt install gcc pkg-config libgtk-3-dev
+
+# Check GTK flags (optional)
 pkg-config --cflags --libs gtk+-3.0
+
+# Compile the project
 gcc gui.c -o gui `pkg-config --cflags --libs gtk+-3.0`
+
+# Run the application
 ./gui
-```
